@@ -32,9 +32,10 @@ const QuizGeneration = ({ summary, onResetSummary }) => {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/generate-quiz`,
+        `https://ai-learning-companion-backend.onrender.com/generate-quiz`,
         { text: summary }
       );
+
 
 
       const quiz = response.data.quiz;

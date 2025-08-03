@@ -29,9 +29,10 @@ const InputForm = () => {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/summarize`,
+        `https://ai-learning-companion-backend.onrender.com/summarize`,
         { text }
       );
+
 
 
       setSummary(response.data.summary || "❌ Failed to get summary");
