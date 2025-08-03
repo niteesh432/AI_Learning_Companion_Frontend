@@ -1,0 +1,44 @@
+.downarrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.6rem;
+    margin-inline: auto;
+    animation: fade-slide-up 3s 1.6s cubic-bezier(0.2, 0.6, 0.2, 1) forwards; 
+    opacity: 0; 
+}
+
+.downarrow img {
+    width: 4rem;
+    animation: pulse 1s 3s ease-out infinite;
+}
+
+.downarrow.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+@keyframes fade-slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(4rem);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes pulse
+{
+    0% {
+        opacity: 1;
+        transform: none;
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(.8);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}

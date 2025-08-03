@@ -1,0 +1,27 @@
+.footer {
+    margin-top: 20px;
+    background: #212529;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .footer .quote {
+    font-style: italic;
+    color: #f8f9fa;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .footer a {
+    color: #0dcaf0;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer a:hover {
+    color: #0a95c2;
+  }
+  
