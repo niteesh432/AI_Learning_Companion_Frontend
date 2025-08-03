@@ -28,9 +28,11 @@ const InputForm = () => {
     setSummary("");
 
     try {
-      const response = await axios.post("http://localhost:8000/summarize", {
-        text,
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/summarize`,
+        { text }
+      );
+
 
       setSummary(response.data.summary || "❌ Failed to get summary");
       setShowSuccess(true);

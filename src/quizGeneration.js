@@ -31,9 +31,11 @@ const QuizGeneration = ({ summary, onResetSummary }) => {
     localStorage.removeItem("userQuizAnswers");
 
     try {
-      const response = await axios.post("http://localhost:8000/generate-quiz", {
-        text: summary,
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/generate-quiz`,
+        { text: summary }
+      );
+
 
       const quiz = response.data.quiz;
       if (Array.isArray(quiz)) {
